@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+body {
+    font-family: 'Roboto';
+    font-size: 1.1em;
+    line-height: 1.5;
+    text-align: center;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+header {
+    min-height: 600px;
+    display: grid;
+    grid-template-rows: 10% 90%;
+    color: #fff;
+    background: rgba(0,0,0,0.2);
+
+    margin-bottom: 3em;
+}
+
+
+
+header .bg-image {
+    position: absolute;
+    background: #333 url(./bg.jpg);
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    min-height: 600px;
+    z-index: -1;
+
+}
+
+nav ul {
+    list-style: none;
+}
+
+
+nav li{
+    display: inline-block;    
+}
+
+nav li a {
+    color: #fff;
+    padding: .3em .4em; 
+}
+
+nav li a:hover{
+    color: #333;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    justify-items: center;
+    align-items: center;
+    padding: 0.5em 1em;
+    height: 50px;
+}
+
+nav h1 {
+    justify-self: left;
+}
+
+.content-wrap {
+    align-self: center;
+}
+
+.content-wrap .big-title {
+    display: inline-block;
+    font-size: 4.5rem;
+    width: 60%;
+    line-height: 1.1em;
+    padding: .2em 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5em 2em;
+    background: #fff;
+    color: #666;
+    margin-top: 1em;
+    border-radius: 2%;
+}
+
+.btn:hover {
+    background: #eaeaea;
+}
+
+#section-a {
+    padding: 0 1em;
+}
+
+#section-a .container {
+    margin: 2em auto;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1em;
+
+}
+#section-a .container img{
+    width: 100%;
+    height: 100%;
+} 
+
+#section-a .container img:hover{
+    cursor: pointer;
+    opacity: 0.8;
+} 
+
+#section-a h2 {
+    font-size: 2.4em;
+    color: rgb(86 154 181);
+}
+
+footer {
+    background: rgb(86 154 181);
+    color: #eaeaea;
+    padding: 1em 0;
+    margin-top: 3em;
+}
+
+footer .doneBy {
+    color: #cab633;
+    cursor:pointer;
+}
+
+
+@media(max-width: 600px){
+    .content-wrap .big-title {
+        font-size: 3.5rem;
+        line-height: 0.85em;
+    }
+    body {
+        font-size: 1em;
+    }
+
+    nav {
+        grid-template-columns: 1fr;
+    }
+    nav h1 {
+        justify-self: center;
+        font-size: 2em;
+        margin-bottom: .2em;
+    }
+}
